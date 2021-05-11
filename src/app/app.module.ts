@@ -14,7 +14,7 @@ import { AnalyticsCounterComponent } from './analytics-counter/analytics-counter
 export class AppModule {
 
   constructor(private injector: Injector) {
-    const analyticsCounter = createCustomElement(AnalyticsCounterComponent, { injector });
+    const analyticsCounter = createCustomElement(AnalyticsCounterComponent, { injector: injector });
     customElements.define('analytics-counter', analyticsCounter);
   }
   ngDoBootstrap() {}
